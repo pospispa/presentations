@@ -1,0 +1,159 @@
+My Coding Dojo Journey in Go
+
+28 Feb 2017
+
+
+Pavel Pospisil
+Software Engineer, Kubernetes Storage, Red Hat
+pospispa@gmail.com
+
+
+* Questions: Any Time
+
+.image ./questions.jpg
+
+
+* Starting from Zero in September 2016
+
+.image ./nothing.jpg
+
+
+
+* What Is a Coding Dojo?
+
+.image ./coding-dojo-small.jpg
+
+
+* Coding Dojo Highlights
+
+- Unpredictable
+- Sharing Knowledge
+- Pair Programming in front of an Audience
+- 5 min Sprints
+- Collaboration, Communication
+- Test Driven Development
+- Unfinished Implementation
+- Training, Trying Things
+- Retrospective
+
+
+* Tiny Bits that Keep Adding Up
+
+.image ./bits-adding-up.jpg
+
+
+* Test Driven Development
+
+.image ./feedback.jpg
+
+
+* Table Tests
+
+.code -numbers potter_test.go /START OMIT/,/END OMIT/
+
+
+* Day Job
+
+
+* Adding Zones Configuration for Dynamic Provisioning
+
+- Dynamic Provisioning
+
+- Administrator in Storage Class (included zones):
+  zones: zone1, zone2, zone3
+
+- User in Persistent Volume Claim (included/excluded regions/zones):
+  selector:
+    matchExpressions:
+        - key: failure-domain.beta.kubernetes.io/zone
+          operator: In
+          values:
+            - us-central1-b
+            - us-east1-b
+
+
+* func TestValidatePVCSelector
+
+.code -numbers util1_test.go /START OMIT/,/END OMIT/
+
+
+* Sharing Knowledge
+
+
+* Transformation Priority Premise
+
+.link https://en.wikipedia.org/wiki/Transformation_Priority_Premise
+
+1. ({} → nil) no code at all → code that employs nil
+2. (nil → constant)
+3. (constant → constant+) a simple constant to a more complex constant
+4. (constant → scalar) replacing a constant with a variable or an argument
+5. (statement → statements) adding more unconditional statements.
+6. (unconditional → if) splitting the execution path
+ ...
+
+* A Function API Rework
+
+
+* Before Rework
+
+.code -numbers romans-before.go /START OMIT/,/END OMIT/
+
+
+* After Rework
+
+.code -numbers romans-after.go /START OMIT/,/END OMIT/
+
+
+* Big Bang
+
+.image ./big-bang.jpg
+
+
+* New Function From Scratch
+
+.image ./construction-works.jpg
+
+
+* Day Job
+
+
+* Code Review
+
+.image ./code-review.jpg
+
+
+* Before a Function API Rework
+
+.code -numbers util-before.go /START OMIT/,/END OMIT/
+
+
+* After a Function API Rework
+
+.code -numbers util-after.go /START OMIT/,/END OMIT/
+
+
+* Communication
+
+
+* Chaos?
+
+.image ./babylonian-tower.jpg
+
+
+* Practise Makes Better
+
+.image ./practise-makes-better.jpg
+
+
+* Programming by Intention
+
+.code -numbers romans-by-intention.go /START OMIT/,/END OMIT/
+
+
+* Interested in Coding Dojo?
+
+.link https://www.facebook.com/CodingDojoBrno/
+
+- Every Wednesday from 18:00 till 20:30
+- Faculty of Informatics, Masaryk University, room S505
