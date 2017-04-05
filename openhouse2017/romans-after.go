@@ -12,7 +12,7 @@ func valid(i string) bool {
 	return true
 }
 
-func ToInt(i string) (int, error) {
+func ToInt(i string) (int, error) { // HL
 	if !valid(i) {
 		return -1, Invalid
 	}

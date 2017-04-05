@@ -476,7 +476,7 @@ func Regions2Zones(in Regions2ZonesParams) (sets.String, error) {
 
 // CalculateSetOfZonesParams are parameters for the func CalculateSetOfZones
 //START OMIT
-type CalculateSetOfZonesParams struct {
+type CalculateSetOfZonesParams struct { // HL
 	// PVC data structure that is used for the set of zones calculation
 	PVC *v1.PersistentVolumeClaim
 	// is parameter zone specified in the Storage Class?
@@ -492,7 +492,7 @@ type CalculateSetOfZonesParams struct {
 // CalculateSetOfZones returns:
 // - either a set of zones resulting from currently available zones, allowed zones by an admin in the corresponding storage class and zones preferred by the user in the selector part of the PVC
 // - or an error in case the resulting set of zones is empty or another error occurred
-func CalculateSetOfZones(input CalculateSetOfZonesParams) (sets.String, error) {
+func CalculateSetOfZones(input CalculateSetOfZonesParams) (sets.String, error) { // HL
 	var ret, allAvailableZones sets.String
 	var err error
 	emptySet := make(sets.String)

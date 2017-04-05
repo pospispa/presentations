@@ -13,7 +13,7 @@ func valid(i string) bool {
 
 //START OMIT
 func ToInt(i string) (int, error) {
-	if !valid(i) {
+	if !valid(i) { // HL
 		//END OMIT
 		return -1, Invalid
 	}

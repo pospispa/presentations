@@ -601,7 +601,7 @@ func (z *ZonesConf) calculateRegionToZonesMap() error {
 // GetConfZones returns:
 // - either a set of zones resulting from currently available zones, allowed zone(s) by an admin in the corresponding storage class and zones preferred by the user in the selector part of the PVC
 // - or an error in case the resulting set of zones is empty or another error occurred
-func (z *ZonesConf) GetConfZones() (sets.String, error) {
+func (z *ZonesConf) GetConfZones() (sets.String, error) { // HL
 	var err error
 	if !z.isSCZoneConfigured && !z.isSCZonesConfigured {
 		if z.resultingZones, err = z.getAllAvailableZones(); err != nil {

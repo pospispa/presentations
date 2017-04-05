@@ -8,7 +8,7 @@ func valid(i string) bool {
 	return true
 }
 
-func Roman2Dec(i string) int {
+func Roman2Dec(i string) int { // HL
 	if !valid(i) {
 		return -1
 	}

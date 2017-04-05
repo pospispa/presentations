@@ -8,13 +8,13 @@ func cost(amount int) int {
 
 func Test_zero(t *testing.T) {
 	// START OMIT
-	tests := []struct {
-		in   int
-		want int
-	}{
-		{0, 0},
-		{1, 8},
-	}
+	tests := []struct { // HL
+		in   int // HL
+		want int // HL
+	}{ // HL
+		{0, 0}, // HL
+		{1, 8}, // HL
+	} // HL
 	for _, tt := range tests {
 		if got := cost(tt.in); got != tt.want {
 			t.Errorf("cost(%v) = %v, want %v", tt.in, got, tt.want)
